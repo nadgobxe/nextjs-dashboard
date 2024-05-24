@@ -2,12 +2,10 @@ import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
-import clsx from 'clsx';
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
  
 export default function Page() {
-  const status = 'paid';
 
   return (
     <main className="flex min-h-screen flex-col p-6">
@@ -25,15 +23,6 @@ export default function Page() {
             </a>
             , brought to you by Vercel.
           </p>
-          <span
-            className={clsx(
-              'inline-flex items-center rounded-full px-2 py-1 text-sm',
-              {
-                'bg-gray-100 text-gray-500': status === 'pending',
-                'bg-green-500 text-white': status === 'paid',
-              },
-            )}
-          >Super Hero</span>
           <Link
             href="/login"
             className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
